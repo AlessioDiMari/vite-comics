@@ -1,5 +1,6 @@
 <script>
 import AppNav from './components/AppNav.vue';
+import AppFoot from './components/AppFoot.vue';
 
 export default{
 
@@ -10,7 +11,7 @@ export default{
     },
     components:{
         AppNav,
-
+        AppFoot,
     }
 
 }
@@ -19,6 +20,7 @@ export default{
 <template>
 
 <AppNav></AppNav>
+<AppFoot></AppFoot>
 
 </template>
 

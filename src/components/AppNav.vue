@@ -49,7 +49,6 @@ nav{
     color: black;
     
     .container{
-        display: flex;
         justify-content: space-between;
         align-items: center;
         align-items: stretch;
