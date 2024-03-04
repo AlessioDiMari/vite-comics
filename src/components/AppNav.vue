@@ -1,6 +1,25 @@
 <script>
 export default{
     name: 'AppNav',
+
+    data(){
+        return{
+            links:[
+                'Chatacter',
+                'Comics',
+                'Movies',
+                'TV',
+                'Games',
+                'Collectibles',
+                'Videos',
+                'Fans',
+                'News',
+                'Shop',
+            ],
+
+            clickedLinksIndex: 1,
+        }
+    }
 }
 </script>
 
@@ -12,9 +31,9 @@ export default{
                 <img src="/public/img/dc-logo.png" alt="">
             </div>
             <ul id="nav-links">
-                <li>characters</li>
-                <li class="clicked">comics</li>
-                <li>movies</li>
+                <li v-for="(link, index) in links"
+                :class="index == clickedLinksIndex ? 'clicked' : '' "
+                >{{ link }}</li>
             </ul>
         </div>
     </nav>
@@ -28,12 +47,14 @@ nav{
 
     background-color: white;
     color: black;
-
+    
     .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
         align-items: stretch;
+        padding: 0 20px;
+        max-height: 120px;
     }
 
     #logo-img{
@@ -59,7 +80,7 @@ nav{
             display: flex;
             align-items: center;
 
-            // link
+            // link cliccato/attivo
             &.clicked{
                 color: #0282F9;
             }
