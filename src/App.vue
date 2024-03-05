@@ -3,6 +3,7 @@ import AppNav from './components/AppNav.vue';
 import AppFoot from './components/AppFoot.vue';
 import BlueLinks from './components/BlueLinks.vue';
 import AppProduct from './components/AppProduct.vue';
+import AppHero from './components/AppHero.vue';
 
 export default{
 
@@ -13,6 +14,7 @@ export default{
     },
     components:{
         AppNav,
+        AppHero,
         AppProduct,
         BlueLinks,
         AppFoot,
@@ -24,6 +26,8 @@ export default{
 <template>
 
 <AppNav></AppNav>
+
+<AppHero></AppHero>
 
 <AppProduct></AppProduct>
 

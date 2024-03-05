@@ -7,7 +7,7 @@ export default{
         // incico il nome di ogni props e il tipo
         comicName: String,
         comicImage: String,
-
+        comicPrice: String,
     },
 
     data(){
@@ -23,9 +23,9 @@ export default{
 <template>
 
 <div class="product">
-    <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="">
-    <h4>Action Comics</h4>
-    <div class="price">$19.99</div>
+    <img :src="comicImage" alt="">
+    <h4>{{ comicName }}</h4>
+    <div class="price">{{ comicPrice }}</div>
 </div>
 
 </template>

@@ -68,6 +68,7 @@ export default{
             gap: 16px;
             height: 55px;
             text-transform: uppercase;
+            cursor: pointer;
 
             img{
                 max-width: 55px;

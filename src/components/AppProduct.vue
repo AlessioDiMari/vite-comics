@@ -10,7 +10,7 @@ export default{
 
     data(){
         return{
-            ComicsList:[
+            comicsList:[
                 {
                     "thumb": "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
                     "price": "$19.99",
@@ -94,8 +94,18 @@ export default{
 
 <template>
 
-<div class="container product-list">
-    <ComicsItem v-for="actualComics in ComicsList" ></ComicsItem>
+<div class="wrapper">
+    <div class="container">
+        <h2>current series</h2>
+    </div>
+    <div class="container">
+        <div class="product-list">
+            <ComicsItem v-for="actualComics in comicsList" 
+            :comicName="actualComics.series" 
+            :comicImage="actualComics.thumb" 
+            :comicPrice="actualComics.price"></ComicsItem>
+        </div>
+    </div>
 </div>
 
 </template>
@@ -106,15 +116,32 @@ export default{
 @use '../styles/general.scss' as *;
 @use '../styles/_variables.scss' as *;
 
+h2{
+    padding: 16px 30px;
+    margin: 0;
+    background-color: $primary;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+}
+
 .product-list{
+    padding-bottom: 54px;
+    display: flex;
     flex-wrap: wrap;
     gap: 28px;
 
     .product{
         width: calc(100% / 6 - (28px / 6 * 5));
+        text-transform: uppercase;
+        
+        h4{
+            font-weight: normal;
+        }
 
         img{
             width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
         }
     }
 }
