@@ -41,7 +41,8 @@ export default{
 </template>
 
 <style lang="scss">
-@use '../styles/general.scss';
+@use '../styles/general.scss' as *;
+@use '../styles/_variables.scss' as *;
 
 nav{
 
@@ -81,7 +82,7 @@ nav{
 
             // link cliccato/attivo
             &.clicked{
-                color: #0282F9;
+                color: $primary;
             }
 
             &.clicked::before{
@@ -91,7 +92,7 @@ nav{
                 left: 0;
                 width: 100%;
                 height: 5px;
-                background-color: #0282F9;
+                background-color: $primary;
             }
         }
     }

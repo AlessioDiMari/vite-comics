@@ -72,7 +72,8 @@ export default{
 
 
 <style lang="scss">
-@use '../styles/general.scss';
+@use '../styles/general.scss' as *;
+@use '../styles/_variables.scss' as *;
 
 footer{
 
@@ -122,6 +123,8 @@ footer{
     
     .bottom-foot{
 
+        background-color: #303030;
+
         .container{
             align-items: center;
             max-height: 110px;
@@ -130,8 +133,9 @@ footer{
             button{
                 padding: 17px 14px;
                 background-color: transparent;
-                border: 2px solid #0282F9;
+                border: 2px solid $primary;
                 font-weight: bold;
+                cursor: pointer;
             }
     
     
@@ -141,7 +145,7 @@ footer{
                 gap: 30px;
 
                 strong{
-                    color: #0282F9;
+                    color: $primary;
                 }
     
                 ul{
