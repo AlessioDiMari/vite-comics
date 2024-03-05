@@ -32,15 +32,19 @@ export default{
 
     <footer>
         <div class="top-foot">
-            <div class="link-info container">
-                <div v-for="actualLinkList in linkList" class="link-info-section">
-                    <h4>{{ actualLinkList.name }}</h4>
-                    <ul>
-                        <li v-for="actualLink in actualLinkList.links">{{ actualLink }}</li>
-                    </ul>
+            <div class="container">
+                <div class="link-info">
+                    <div v-for="actualLinkList in linkList" class="link-info-section">
+                        <h4>{{ actualLinkList.name }}</h4>
+                        <ul>
+                            <li v-for="actualLink in actualLinkList.links">{{ actualLink }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="logo-big">
+                    <img src="/public/img/dc-logo-bg.png" alt="">
                 </div>
             </div>
-            
         </div>
         <div class="bottom-foot">
         </div>
@@ -59,12 +63,19 @@ footer{
     .top-foot{
         display: flex;
         justify-content: space-between;
+        // align-items: center;
         padding: 0 20px;
+        // max-width: 1280px;
         width: 100%;
         max-height: 370px;
         background-image: url('../../public/img/footer-bg.jpg');
-
+        background-position: cover;
+        overflow: hidden;
         
+        .container{
+            width: 100%;
+        }
+
         .link-info{
             display: flex;
             flex-flow: column wrap;
@@ -83,6 +94,10 @@ footer{
             color: grey;
             }
 
+        }
+
+        #logo-big{
+            align-self: center;
         }
 
     }
