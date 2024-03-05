@@ -2,6 +2,7 @@
 import AppNav from './components/AppNav.vue';
 import AppFoot from './components/AppFoot.vue';
 import BlueLinks from './components/BlueLinks.vue';
+import AppProduct from './components/AppProduct.vue';
 
 export default{
 
@@ -12,6 +13,7 @@ export default{
     },
     components:{
         AppNav,
+        AppProduct,
         BlueLinks,
         AppFoot,
     }
@@ -23,6 +25,8 @@ export default{
 
 <AppNav></AppNav>
 
+<AppProduct></AppProduct>
+
 <BlueLinks></BlueLinks>
 
 <AppFoot></AppFoot>
@@ -30,7 +34,7 @@ export default{
 </template>
 
 <style lang="scss">
+@use '../src/styles/general.scss' as *;
 
-@use './styles/general.scss' as *;
 
 </style>
