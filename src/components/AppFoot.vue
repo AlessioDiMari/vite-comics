@@ -47,6 +47,24 @@ export default{
             </div>
         </div>
         <div class="bottom-foot">
+            <div class="container">
+                <div class="left">
+                    <button>
+                        SIGN-UP NOW!
+                    </button>
+                </div>
+    
+                <div class="right">
+                    <strong>FOLLOW US</strong>
+                    <ul>
+                        <li><img src="../../public/img/footer-facebook.png" alt=""></li>
+                        <li><img src="../../public/img/footer-twitter.png" alt=""></li>
+                        <li><img src="../../public/img/footer-youtube.png" alt=""></li>
+                        <li><img src="../../public/img/footer-pinterest.png" alt=""></li>
+                        <li><img src="../../public/img/footer-periscope.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -103,7 +121,39 @@ footer{
     }
     
     .bottom-foot{
-        max-height: 110px;
+
+        .container{
+            align-items: center;
+            max-height: 110px;
+            padding: 30px 20px;
+    
+            button{
+                padding: 17px 14px;
+                background-color: transparent;
+                border: 2px solid #0282F9;
+                font-weight: bold;
+            }
+    
+    
+            .right{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                strong{
+                    color: #0282F9;
+                }
+    
+                ul{
+                    display: flex;
+                    align-items: center;
+                    gap: 18px;
+                    list-style-type: none;
+                }
+    
+            }
+        }
+
     }
 
     
