@@ -30,7 +30,9 @@ export default{
             <div id="logo-img">
                 <img src="/public/img/dc-logo.png" alt="">
             </div>
+            <!-- lista links -->
             <ul id="nav-links">
+                <!-- link dinamicizzato -->
                 <li v-for="(link, index) in links"
                 :class="index == clickedLinksIndex ? 'clicked' : '' "
                 >{{ link }}</li>

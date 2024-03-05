@@ -31,9 +31,12 @@ export default{
 <template>
 
     <footer>
+        <!-- parte superiore del footer -->
         <div class="top-foot">
             <div class="container">
+                <!-- lista dei links info -->
                 <div class="link-info">
+                    <!-- link info singolo dinamicizzato -->
                     <div v-for="actualLinkList in linkList" class="link-info-section">
                         <h4>{{ actualLinkList.name }}</h4>
                         <ul>
@@ -46,8 +49,11 @@ export default{
                 </div>
             </div>
         </div>
+
+        <!-- parte inferiore del footer -->
         <div class="bottom-foot">
             <div class="container">
+                <!-- bottone di accesso -->
                 <div class="left">
                     <button>
                         SIGN-UP NOW!
@@ -56,6 +62,7 @@ export default{
     
                 <div class="right">
                     <strong>FOLLOW US</strong>
+                    <!-- lista social -->
                     <ul>
                         <li><img src="../../public/img/footer-facebook.png" alt=""></li>
                         <li><img src="../../public/img/footer-twitter.png" alt=""></li>

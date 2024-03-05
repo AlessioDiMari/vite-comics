@@ -99,7 +99,9 @@ export default{
         <h2>current series</h2>
     </div>
     <div class="container">
+        <!-- lista prodotti -->
         <div class="product-list">
+            <!-- prodotto dinamicizzato -->
             <ComicsItem v-for="actualComics in comicsList" 
             :comicName="actualComics.series" 
             :comicImage="actualComics.thumb" 
@@ -124,12 +126,14 @@ h2{
     transform: translateY(-50%);
 }
 
+// lista prodotti
 .product-list{
     padding-bottom: 54px;
     display: flex;
     flex-wrap: wrap;
     gap: 28px;
 
+    // prodotto singolo
     .product{
         width: calc(100% / 6 - (28px / 6 * 5));
         text-transform: uppercase;
