@@ -1,6 +1,7 @@
 <script>
 import AppNav from './components/AppNav.vue';
 import AppFoot from './components/AppFoot.vue';
+import BlueLinks from './components/BlueLinks.vue';
 
 export default{
 
@@ -11,6 +12,7 @@ export default{
     },
     components:{
         AppNav,
+        BlueLinks,
         AppFoot,
     }
 
@@ -20,6 +22,9 @@ export default{
 <template>
 
 <AppNav></AppNav>
+
+<BlueLinks></BlueLinks>
+
 <AppFoot></AppFoot>
 
 </template>
